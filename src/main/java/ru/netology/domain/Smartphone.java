@@ -26,21 +26,10 @@ public class Smartphone extends Product {
         this.manufacturer = manufacturer;
     }
 
-//    public int getPages() {
-//        return pages;
-//    }
-//
-//    public void setPages(int pages) {
-//        this.pages = pages;
-//    }
-//
-//    public int getPublishedYear() {
-//        return publishedYear;
-//    }
-//
-//    public void setPublishedYear(int publishedYear) {
-//        this.publishedYear = publishedYear;
-//    }
+    @Override
+    public boolean matches(String search) {
+        return super.matches(search) || manufacturer.contains(search);
+    }
 
     @Override
     public boolean equals(Object o) {

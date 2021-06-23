@@ -26,21 +26,11 @@ public class Book extends Product {
         this.author = author;
     }
 
-//    public int getPages() {
-//        return pages;
-//    }
-//
-//    public void setPages(int pages) {
-//        this.pages = pages;
-//    }
-//
-//    public int getPublishedYear() {
-//        return publishedYear;
-//    }
-//
-//    public void setPublishedYear(int publishedYear) {
-//        this.publishedYear = publishedYear;
-//    }
+    @Override
+//    override нужен?
+    public boolean matches(String search) {
+        return super.matches(search) || author.contains(search);
+    }
 
     @Override
     public boolean equals(Object o) {
